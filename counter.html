@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+button{
+width:150px;
+height:30px;
+background-color:red;
+border-color:black;
+}
+.value {
+font-size:5rem;
+color:blue;
+}
+</style>
+</head>
+<body>
+<center>
+ <div class="container">
+ <h1 style="font-size:4rem;color:green;margin-down:5px;">counter</h1>
+ <p class="value" id="counter" >0</p>
+ <button id="incr"> + </button>
+ <button id="decr"> - </button>
+ </div>
+</center>
+
+<script>
+const incr=document.getElementById('incr');
+const decr=document.getElementById("decr");
+const counter=document.getElementById('counter');
+let count=0;
+incr.addEventListener("click",add)
+decr.addEventListener("click",sub)
+function add(){
+count++;
+counter.innerHTML=count;
+};
+function sub(){
+count--;
+counter.innerHTML=count;
+};
+</script>
+</body>
+</html>
