@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>calculator</title>
+<style>
+.a button{
+margin-bottom:5px;
+width:50px;
+height:30px;
+background-color:skyblue;
+color:darkblack;
+border-radius:50px;
+border:none;
+}
+</style>
+</head>
+<body>
+<input  type="text" style="width:158px;margin-bottom:5px;background-color:skyblue;height:30px;border:none;border-radius:50px;"
+id='output'>
+<div class="a">
+<button onclick="clr()">AC</button>
+<button onclick="display('7')">7</button>
+<button onclick="display('8')">8</button><br>
+<button onclick="display('1')">1</button>
+<button onclick="display('2')">2</button>
+<button onclick="display('3')">3</button><br>
+<button onclick="display('4')">4</button>
+<button onclick="display('5')">5</button>
+<button onclick="display('6')">6</button><br>
+<button onclick="display('9')">9</button>
+<button onclick="display('0')">0</button>
+<button onclick="display('.')">.</button><br>
+<button onclick="display('+')">+</button>
+<button onclick="display('-')">-</button>
+<button onclick="display('/')">%</button><br>
+<button onclick="display('*')">*</button>
+<button onclick="del()">del</button>
+<button onclick="calc()">=</button>
+</div>
+<script>
+const result=document.getElementById("output");
+function display(num){
+result.value+=num;
+}
+function calc(){
+try{
+result.value=eval(result.value)
+}
+catch(err){
+alert("invalid input");
+}
+}
+function clr(){
+result.value="";
+}
+function del(){
+result.value=result.value.slice(0,-1);
+}
+</script>
+</body>
+</html>
